@@ -309,19 +309,6 @@ def changeonhook():
     elif onhook ==0:
         onhook=1
         print u"已修改为挂机模式，将忽略选课未开始信息"
-#程序初始化登录函数
-def init():
-    global username,password
-    print u'#--------------------------------'
-    print  '	程序：杭电抢课软件'.decode('utf-8').encode('gbk')
-    print u'	作者：YLZ admin@lianzheng.tech'
-    print u'	日期：2018-1-7'
-    print u'	语言：python2.7'
-    print u'	功能：自动刷公选课抢课'
-    print u'#--------------------------------'
-    username=raw_input("username:")
-    password=getpass.getpass("password:")
-    md5(password)
 
 #程序开始
 if __name__ == '__main__':
