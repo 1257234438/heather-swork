@@ -14,7 +14,7 @@ import getpass
 
 username=""
 password=""
-host="http://jxglteacher.hdu.edu.cn/"
+host="https://jwc.wust.edu.cn/"
 STUrl=""
 session=""
 name=""
@@ -51,7 +51,7 @@ def getsturl():
     global STUrl
     posturl = "http://cas.hdu.edu.cn/cas/login"
     loginpage = 'http://cas.hdu.edu.cn/cas/login?service=http://jxglteacher.hdu.edu.cn/index.aspx'
-    #url = 'http://jxglteacher.hdu.edu.cn'
+    #url = 'https://jwc.wust.edu.cn/'
 
     headers = {'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Mobile/14D27 QQ/6.7.1.416 V1_IPH_SQ_6.7.1_1_APP_A Pixel/750 Core/UIWebView NetType/4G QBWebViewType/1',
              'Referer' : loginpage}
@@ -64,7 +64,7 @@ def getsturl():
     S = re.findall(r'\w{2}-\d{7}-\w{20}',text)
     loginticket = S[0]
     postData = {'encodedService' : 'http%3a%2f%2fjxglteacher.hdu.edu.cn%2findex.aspx',
-            'service' : 'http://bkjx.wust.edu.cn/',
+            'service' : 'https://jwc.wust.edu.cn/',
             'serviceName' : 'null',
             'loginErrCnt' : '0',
             'username' : username,
@@ -92,7 +92,7 @@ def getsturl():
     STUrl='http://jxglteacher.hdu.edu.cn/index.aspx?ticket='+S[1]
     #print STUrl
     #print request
-#获得正方教务系统session
+#获得教务系统session
 def getsession():
     try:
         global session,hosturl,aspxsession
